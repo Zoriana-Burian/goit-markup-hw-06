@@ -41,7 +41,47 @@
         <!--Первая секция - Заголовок сайта-->
        <section class="hero">
           <h1 class="hero-title">эффективные решения <br> для вашего бизнеса</h1>
-         <a href="#" class="button .primary">Заказать услугу</a>
+         <a href="#" class="button .primary" data-modal-open>Заказать услугу</a>
+         <div class="backdrop is-hidden" data-modal>
+           <div class="modal">
+             <div class="form">
+               
+              <form class="js-speaker-form">
+
+              <b class="form-text">Оставьте свои данные, мы вам перезвоним</b>
+ 
+              <div class="form-field">
+                <label class="form-label" for="name">Имя</label>
+               <input class="form-input" type="text" name="name" id="name">
+              </div>
+
+               <div class="form-field">
+                <label class="form-label" for="tel">Телефон</label>
+               <input class="form-input" type="tel" name="tel" id="tel"> 
+               </div>
+
+               <div class="form-field">
+                 <label class="form-label" for="email">Почта</label>
+               <input class="form-input" type="email" name="email" id="email">
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="coment">Коментарий</label>
+               <textarea class="form-textarea" name="coment" id="coment" rows="10"></textarea>
+              </div>
+
+              <div class="form-field">
+               <input class="form-checkbox" type="checkbox" name="agreement" id="agreement">
+               <label class="form-agreement" for="agreement">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>  </label>
+              </div>
+
+               <button class="button-submit" type="submit">Отправить</button>
+
+             </form>
+            </div>
+             <button data-modal-close>Закрить</button>
+           </div>
+         </div>
         </section> 
 
         <!--Вторая секция - описание работи-->
@@ -240,11 +280,40 @@
         <li class="item"><a href="" class="link" aria-label="Ссылка на Linkedin"><svg class="social-icon"><use href="./images/symbol-defs.svg#icon-linkedin"></use></svg></a></li>
      </ul>
     </div>
+
+    <div class="signature">
+       
+      <b class="text-signature">Подпишитесь на рассылку</b>
+        
+       <form class="form-signature">
+        <input class="input-footer" type="text" name="email" id="email" placeholder="Email">
+        <label class="label-footer" for="email"></label>
+        <button class="button-fotter" type="submit">Подписаться</button>
+      </form>
+    </div>
   </div>
+   
 
     <p class="company-text">2020 | Developed by GoIT Students</p>
     
+    
 
   </footer>
+  <script src="./js/modal.js"></script>
+  <script>
+    (() => {
+      document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}: ${value}`),
+          );
+
+          e.currentTarget.reset();
+        });
+    })();
+  </script>
 </body>
 </html>
