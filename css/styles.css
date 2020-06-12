@@ -265,8 +265,8 @@ ul {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 528px;
-    height: 581px;
+    min-width: 528px;
+    min-height: 581px;
     background-color: var(--primary-bg-colot); 
 
     padding: 0;
@@ -278,26 +278,70 @@ ul {
     margin-left: auto;
     margin-right: auto;
     padding: 40px 40px;
+    width: 528px;
+    
 }
 
 .form-field {
-    display: flex;
-    flex-direction: column;
+    position: relative;
     
 }
 
 .form-input {
+    width: 100%;
     margin: 0;
     margin-bottom: 28px;
-    padding: 12px 44px 12px 16px;
+    padding: 12px 18px 12px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     
 }
 
+.form-label {
+    position: absolute;
+    margin: 0;
+   
+    top: 30%;
+    left: 48px;
+    transform: translateY(-50%);
+
+    transition: transform 250ms linear;
+
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+      
+
+}
+.form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label  {
+    color: var(--accent-color);
+    transform: translate(-30px, -43px);
+   
+}
+
+.form-icon {
+    position: absolute;
+    top: 30%;
+    left: 19px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: tomato;
+}
+
+.form-input:focus ~ .form-icon {
+    background-color: yellow;
+}
+
+
 .form-textarea {
+    
+    width: 100%;
     margin-bottom: 20px;
-    padding: 12px 44px 12px 16px;
+    padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
@@ -306,27 +350,30 @@ textarea {
     resize: none;
 }
 
-.form-label {
-    margin: 0;
-    color: var(--title-text-color);
 
-}
 
 .form-text {
-    
+
+margin-bottom: 30px;
+   
 font-size: 20px;
 line-height: 1.15;
 letter-spacing: 0.03em;
+text-align: center;
 
 color: var(--title-text-color)
 }
 
 .form-agreement {
     margin: 0;
-    margin-bottom: 30px;
+    
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
 }
 
 .button-submit {
+    margin-top: 30px;
     padding: 10px 55px;
     background-color: var(--accent-color);
     color: var(--second-title-color);
@@ -816,7 +863,7 @@ color: var(--second-title-color)
 
 .input-footer {
    
-    padding: 18px 12px;
+    padding: 16px 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -842,6 +889,7 @@ color: var(--second-title-color)
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+
 }
 
 
