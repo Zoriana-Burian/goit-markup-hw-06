@@ -479,16 +479,13 @@ color: var(--title-text-color)
 
 .work-list {
     display: flex;
-
-    
-
-    
     
 }
 
 .work-list .item {
-    width: 370px;
     position: relative;
+    width: 370px;
+    
 }
 
 .work-list .item:not(:last-child) {
