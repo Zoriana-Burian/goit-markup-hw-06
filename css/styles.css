@@ -361,7 +361,7 @@ textarea {
 
 .coment-text {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 12px;
 
     transform: translateY(-50%);
