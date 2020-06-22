@@ -270,7 +270,10 @@ ul {
     min-height: 581px;
     background-color: var(--primary-bg-colot); 
 
-    padding: 0;  
+    padding: 0; 
+    
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+border-radius: 4px;
 }
 
 .form {
@@ -279,6 +282,8 @@ ul {
     margin-right: auto;
     padding: 40px 40px;
     width: 528px;
+
+    
     
 }
 
@@ -331,7 +336,7 @@ ul {
     width: 18px;
     height: 18px;
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -446,27 +451,34 @@ color: var(--title-text-color)
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: var(--accent-color);
+    
  
 }
 
 .button-close {
     position: absolute;
-    top: -2%;
-    right: -2%;
+    top: 8px;
+    right: 8px;
     padding: 0;
     border: none;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: var(--primary-bg-colot);
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close {
     width: 11px;
     height: 11px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-close:hover {
+    fill: var(--accent-color);
+   
 }
 
 
@@ -791,8 +803,6 @@ color: var(--title-text-color)
     padding-bottom: 28px;
     justify-content: space-between;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
 }
 
 .footer-logo {
@@ -901,24 +911,6 @@ color: var(--title-text-color)
     width: 20px;
     height: 20px;
     fill: var(--primary-bg-colot);
-}
-
-
-.company-text  {
-
-    margin-top: 0;
-    margin-bottom: 0;
-    
-    padding-top: 18px;
-    padding-bottom: 21px;
-    
-    color: var(--footer-text-color);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 2;
-    text-align: center;
-    letter-spacing: 0.03em;
-    
 }
 
 .signature {
@@ -1122,7 +1114,7 @@ align-items: center;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
   
 }
 .card-list .text {
